@@ -301,3 +301,38 @@ collections:
             widget: "boolean"
             default: false
           - {label: "Body", name: "body", widget: "markdown"}
+  - name: books
+    label: Books
+    label_singular: Book
+    folder: 'content/docs'
+    path: '{{slug}}/index'
+    create: true  # Allow users to create new documents in this collection
+    fields:  # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "LinkTitle", name: "linktitle", widget: "string"}
+      - {label: "Ordering Bookpages", name: "weight", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Publish this page on", name: "date", widget: "datetime"}
+      - label: "Draft"
+        name: "draft"
+        widget: "boolean"
+        default: false
+      - label: "TOC"
+        name: "toc"
+        default: true
+      - label: "Authors"
+        name: "authors"
+        required: false
+        widget: "list"
+      - label: "Tags"
+        name: "tags"
+        required: false
+        widget: "list"
+      - label: "Categories"
+        name: "categories"
+        required: false
+        widget: "list"
+      - label: "Projects"
+        name: "projects"
+        required: false
+        widget: "list"
